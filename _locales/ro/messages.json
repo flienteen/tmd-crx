@@ -1,0 +1,300 @@
+{
+   "TMDdescription":  
+    {
+      "message": "Navigați mai ușor pe tracker-ul Torrentsmd.com"
+    },
+   "TMDname":
+    {
+      "message": "Torrents.MD extension"
+    },
+
+
+
+
+   "send":
+    {
+      "message": "Trimite"
+    },
+
+   "save":
+    {
+      "message": "Salvează"
+    },
+   "optionTitle":
+    {
+      "message": "Pagina cu opțiuni"
+    },
+   "optionPopupEdit":
+    {
+      "message": "Popup"
+    },
+   "optionPopupShow":
+    {
+      "message": "Afișează următoarele butoane în pop-up"
+    },
+   "optionSoundSet":
+    {
+      "message": "Badge"
+    },
+
+   "optionsClick":
+    {
+      "message": "Opțiunile click"
+    },
+   "newTab":
+    {
+      "message": "Tab nou"
+    },
+   "thisIfTmd":
+    {
+      "message": "Același tab dacă e deschis TMD"
+    },
+   "this":
+    {
+      "message": "Tabul activ"
+    },
+
+
+   "opClickTab":
+    {
+      "message": "click &#92; tab"
+    },
+   "opClickNew":
+    {
+      "message": "nou"
+    },
+   "opClickTmd":
+    {
+      "message": "tmd"
+    },
+   "opClickThis":
+    {
+      "message": "acesta"
+    },
+  "opClickLeft":
+    {
+      "message": "Stîng"
+    },
+   "opClickMiddle":
+    {
+      "message": "Mijloc"
+    },
+   "opClickRight":
+    {
+      "message": "Drept"
+    },
+   "opClickContextSearch":
+    {
+      "message": "Context"
+    },
+
+
+
+
+   "optionsContent":
+    {
+      "message": "Content"
+    },
+   "opUseActivate":
+    {
+      "message": "Activează"
+    },
+   "opUseOF":
+    {
+      "message": "Prieteni Online"
+    },
+   "opUseOFflColse":
+    {
+      "message": "Ascundere Automată [Toți prietenii]"
+    },
+   "opUseOFuseColor":
+    {
+      "message": "Multicolor [Toți prietenii]"
+    },
+   "opUseOFpRight":
+    {
+      "message": "Mișcă în dreaptă"
+    },
+   "opUseOFreloadList":
+    {
+      "message": "Actualizează"
+    },
+   "opUseOFallFriends":
+    {
+      "message": "Toată Lista"
+    },
+   "opUseFU":
+    {
+      "message": "Uploaderul favorit"
+    },
+   "opUseFT":
+    {
+      "message": "Torrentul favorit"
+    },
+   "opUseAW":
+    {
+      "message": "Auto Urmărire"
+    },
+    "opUseQL":
+    {
+      "message": "Link Rapid"
+    },
+    "opUsePT":
+    {
+      "message": "Titlul Topicului"
+    },
+    "opUseSF":
+    {
+      "message": "SmileFix"
+    },
+    "opUseWtch":
+    {
+      "message": "Topicuri Noi"
+    },
+    
+    "opUseUploadTemplate":
+    {
+      "message": "Salvează Șablonul"
+    },    
+    "opUseHighlightMyNickName":
+    {
+      "message": "Evidențiază-mi numele"
+    },
+    "opUseCustomQuote":
+    {
+      "message": "Personalizează Citatele"
+    },
+    "opUseQuickPmBox":
+    {
+      "message": "Mesaj Privat Rapid"
+    }, 
+ 
+ 
+    
+    
+   "opUseFUListS":
+    {
+      "message": "Lista de utilizatori"
+    },
+   "opUseFUImport":
+    {
+      "message": "Importă din Lista cu prieteni"
+    },
+   "opShowChecker":
+    {
+      "message": "Controlează"
+    },
+   "opShowCheckerSound":
+    {
+      "message": "Sunet"
+    },
+   "opPinterval":
+    {
+      "message": "Intervalul de control"
+    },
+    "opUseSpoilerHideHlp":
+    {
+      "message": "Elimină 'apasă aici' (spoiler)"
+    },    
+
+
+
+
+
+
+
+   "search":
+    {
+      "message": "Căutare"
+    },
+   "btn_inbox":
+    {
+      "message": "Mesaje noi"
+    },
+   "btn_new_torr":
+    {
+      "message": "Torrente noi"
+    },
+   "btn_torrents":
+    {
+      "message": "Torrente"
+    },
+   "btn_bookmarks":
+    {
+      "message": "Torrente preferate"
+    },
+   "btn_watcher":
+    {
+      "message": "Urmărire"
+    },
+   "btn_forum":
+    {
+      "message": "Forum"
+    },
+   "btn_friends":
+    {
+      "message": "Prieteni"
+    },
+   "btn_mytorrents":
+    {
+      "message": "Torrentele mele"
+    },
+   "btn_to_appreciate":
+    {
+      "message": "Apreciază"
+    },
+   "btn_upload":
+    {
+      "message": "Încarcă un torrent"
+    },
+   "showSearch":
+    {
+      "message": "Bara de Căutare"
+    },
+   "showOptionPage":
+    {
+      "message": "Setează"
+    },
+
+
+
+   "bb_anchor":
+    {
+      "message": "Introduceți numele ancorei"
+    },
+   "bb_spoiler":
+    {
+      "message": "Text în spoiler"
+    },
+   "bb_link":
+    {
+      "message": "Text sub adresă web"
+    },
+   "bb_size":
+    {
+      "message": "Mărimea textului"
+    },
+
+
+
+   "suggestion":
+    {
+      "message": "Suport și FAQ"
+    },
+   "goToNews":
+    {
+      "message": "Vezi pagina cu noutăți"
+    },
+   "goToOptions":
+    {
+      "message": "Vezi pagina cu opțiuni"
+    },
+
+
+
+
+   "lang":
+    {
+      "message": "ro"
+    }
+}

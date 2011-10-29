@@ -1,0 +1,92 @@
+{
+   "TMDcheck_description":  
+    {
+      "message": "descripton brinza masii"
+    },
+   "TMDcheck_exception":
+    {
+      "message": "exception: $1",
+      "placeholders":
+       {
+         "1":
+          {
+            "content": "$1"
+          }
+       }
+    },
+   "TMDcheck_name":
+    {
+      "message": "Rebuildig.Dev.TMD"
+    },
+   "TMDcheck_node_error":
+    {
+      "message": "Error: info retrieved, but no &lt;fullcount&gt; node found"
+    },
+
+
+
+
+   "ntfSnd":
+    {
+      "message": "Turn <b>off</b> notification sound"
+    },
+   "btnFrnds":
+    {
+      "message": "Show friend in Popup"
+    },
+   "save":
+    {
+      "message": "Save"
+    },
+   "optionTitle":
+    {
+      "message": "Options page"
+    },
+
+
+
+
+
+   "search":
+    {
+      "message": "Search"
+    },
+   "inboxS":
+    {
+      "message": "inbox"
+    },
+   "new_torrS":
+    {
+      "message": "New Torrents"
+    },
+   "torrents":
+    {
+      "message": "torrents"
+    },
+   "bookmarks":
+    {
+      "message": "bookmarks"
+    },
+   "watcherS":
+    {
+      "message": "watcherS"
+    },
+   "forum":
+    {
+      "message": "forum"
+    },
+   "friends":
+    {
+      "message": "friends"
+    },
+
+
+
+
+
+
+   "empty":
+     {
+      "message": "empty"
+     }
+}

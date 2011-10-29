@@ -1,0 +1,331 @@
+{
+   "TMDdescription":  
+    {
+      "message": "Torrents.MD extension. Browse easier Torrentsmd.com tracker!"
+    },
+   "TMDname":
+    {
+      "message": "Torrents.MD extension"
+    },
+
+
+
+
+   "send":
+    {
+      "message": "Send"
+    },
+
+   "save":
+    {
+      "message": "Save"
+    },
+   "optionTitle":
+    {
+      "message": "Options page"
+    },
+   "optionPopupEdit":
+    {
+      "message": "Popup"
+    },
+   "optionPopupShow":
+    {
+      "message": "Show this elements in Popup"
+    },
+   "optionSoundSet":
+    {
+      "message": "Badge"
+    },
+
+   "optionsClick":
+    {
+      "message": "Click Option"
+    },
+   "newTab":
+    {
+      "message": "New Tab"
+    },
+   "thisIfTmd":
+    {
+      "message": "Same Tab if is TMD"
+    },
+   "this":
+    {
+      "message": "Active Tab"
+    },
+
+
+   "opClickTab":
+    {
+      "message": "click &#92; tab"
+    },
+   "opClickNew":
+    {
+      "message": "new"
+    },
+   "opClickTmd":
+    {
+      "message": "tmd"
+    },
+   "opClickThis":
+    {
+      "message": "this"
+    },
+  "opClickLeft":
+    {
+      "message": "Left"
+    },
+   "opClickMiddle":
+    {
+      "message": "Middle"
+    },
+   "opClickRight":
+    {
+      "message": "Right"
+    },
+   "opClickContextSearch":
+    {
+      "message": "Context"
+    },
+    
+    
+   "rightClickContextMenu":
+    {
+      "message": "Right click (context menu)"
+    },
+   "rClick":
+    {
+      "message": "Search on TMD"
+    },
+
+
+
+
+
+
+   "optionsContent":
+    {
+      "message": "Content"
+    },
+   "opUseActivate":
+    {
+      "message": "Activate"
+    },
+   "opUseOF":
+    {
+      "message": "Online Friends"
+    },
+   "opUseOFflColse":
+    {
+      "message": "AutoHide [All Friends]"
+    },
+   "opUseOFuseColor":
+    {
+      "message": "Multicolors [All Friends]"
+    },
+   "opUseOFpRight":
+    {
+      "message": "Move to Right"
+    },
+   "opUseOFreloadList":
+    {
+      "message": "Reload List"
+    },
+   "opUseOFallFriends":
+    {
+      "message": "All Friends"
+    },
+   "opUseOPinWindow":
+    {
+      "message": "Pin Window"
+    },
+    
+    
+   "opUseFU":
+    {
+      "message": "Favorite Uploaders"
+    },
+   "opUseFT":
+    {
+      "message": "Favorite Torrents"
+    },
+   "opUseAW":
+    {
+      "message": "Auto Watcher"
+    },
+   "opUseQL":
+    {
+      "message": "Quick Link"
+    },
+    "opUsePT":
+    {
+      "message": "Topic Title"
+    },
+    "opUseSF":
+    {
+      "message": "SmileFix"
+    },
+    "opUseWtch":
+    {
+      "message": "New Topics"
+    },
+    
+    
+    "opUseUploadTemplate":
+    {
+      "message": "Saving Templates"
+    },
+    "opUseHighlightMyNickName":
+    {
+      "message": "Highlight My NickName"
+    },
+    "opUseCustomQuote":
+    {
+      "message": "Quote Customizing"
+    },
+    "opUseQuickPmBox":
+    {
+      "message": "Quick PM Box"
+    },
+    "opUseSpoilerHideHlp":
+    {
+      "message": "Hide 'apasă aici' (spoiler)"
+    },
+
+    
+    
+    
+    
+   "opUseFUListS":
+    {
+      "message": "Users List"
+    },
+   "opUseFUImport":
+    {
+      "message": "Import from Friends List"
+    },
+   "opShowChecker":
+    {
+      "message": "Check for"
+    },
+   "opShowCheckerSound":
+    {
+      "message": "Sound"
+    },
+   "opPinterval":
+    {
+      "message": "Polling interval"
+    },
+   "opSound":
+    {
+      "message": "Sounds Manager"
+    },
+    
+    
+   "opDefault":
+    {
+      "message": "default"
+    },
+
+
+
+
+
+
+   "search":
+    {
+      "message": "Search"
+    },
+   "btn_inbox":
+    {
+      "message": "Inbox"
+    },
+   "btn_new_torr":
+    {
+      "message": "New Torrents"
+    },
+   "btn_torrents":
+    {
+      "message": "Torrents"
+    },
+   "btn_bookmarks":
+    {
+      "message": "Bookmarks"
+    },
+   "btn_watcher":
+    {
+      "message": "Watching"
+    },
+   "btn_forum":
+    {
+      "message": "Forum"
+    },
+   "btn_friends":
+    {
+      "message": "Friends"
+    },
+   "btn_mytorrents":
+    {
+      "message": "My torrents"
+    },
+   "btn_to_appreciate":
+    {
+      "message": "Appreciate"
+    },
+   "btn_upload":
+    {
+      "message": "Upload"
+    },
+   "showSearch":
+    {
+      "message": "Search bar"
+    },
+   "showOptionPage":
+    {
+      "message": "Options"
+    },
+
+
+
+
+
+   "bb_anchor":
+    {
+      "message": "Type the name of anchor"
+    },
+   "bb_spoiler":
+    {
+      "message": "Text hidden in spoiler"
+    },
+   "bb_link":
+    {
+      "message": "Your text to link here"
+    },
+   "bb_size":
+    {
+      "message": "Text size"
+    },
+
+
+
+   "suggestion":
+    {
+      "message": "Support and FAQs"
+    },
+   "goToNews":
+    {
+      "message": "View News Page"
+    },
+   "goToOptions":
+    {
+      "message": "View Options Page"
+    },
+
+
+
+
+   "lang":
+    {
+      "message": "en"
+    }
+}

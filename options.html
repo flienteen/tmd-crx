@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/jquery.tablednd.js"></script>
+<script type="text/javascript" src="lib/st.js"></script>
+<script type="text/javascript" src="lib/options.js"></script>
+<style type="text/css">
+<!--
+/*
+@font-face 
+{
+    font-family: 'TMDFonts';
+    src: url('chrome-extension://aahalpfpcdjennlmbjeofnbecfoifica/pic/fonts/Verdana.ttf') format('truetype');
+}
+@font-face 
+{
+    font-family: 'TMDFonts';
+    src: url('chrome-extension://aahalpfpcdjennlmbjeofnbecfoifica/pic/fonts/Verdana_Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+*{ font-family:TMDFonts;}
+*/
+
+
+body
+{
+	background-color: #f5f4ea;
+	font-size:20px;
+	color: #000;
+    cursor:default;
+}
+
+.t { color:#336699; }
+.m { color:#309830; }
+.d { color:#cc3300; }
+
+th
+{
+	background:none;
+	border:none;
+}
+
+
+.btn {
+	text-decoration:none;
+	color: #000;
+}
+.btn:hover {	
+	/*-webkit-transition-duration: 1s;*/
+	/*text-shadow: #28282d 1px 2px 7px;*/
+	/*-webkit-box-shadow:  0px 0px 7px #000;*/
+}
+
+table#optBody
+{
+	border:1px solid #a79f72;
+	background-color:#ece9d8;
+	-webkit-box-shadow: 3px 3px 7px #777;
+	-webkit-border-radius: 11px;
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 0px 0px;
+}
+
+table#optBody .thBody
+{
+	background-color:#ffffff;
+	border-top: 4px solid #e1e1e1;
+	border-bottom: 4px solid #e1e1e1;
+	text-shadow: #BBB 1px 2px 1px;
+}
+
+table#optBody td.tdBody
+{
+	border:1px solid #a79f72;
+	-webkit-border-radius: 11px;
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 0px 0px;
+}
+
+table#optBody td.tdBody > .cont /*>  div >*/ table:not(.noEffect) { /*padding:10px;*/ -webkit-transition:All 1s ease; }
+
+table#optBody td.tdBody > .cont /*>  div >*/ table:not(.hide):hover
+{
+	-webkit-box-shadow:0px 0px 7px #a79f72;
+	background-color: rgba(219, 208, 162, 0.3);
+	-webkit-animation-duration:1s;
+	-webkit-animation-iteration-count: 15;
+	-webkit-border-radius: 7px;
+}
+
+div.thBody
+{
+	text-align:center;
+	font-weight:bold;
+	cursor:default;
+}
+
+div.cont { margin:10px }
+
+table#checker { margin-right:10px; }
+
+table#checker td { font-size:16px; }
+
+table#checker th
+{
+	background:none;
+	border:none;
+	text-align:left;
+}
+
+table#checker tr > td:first-child
+{
+	padding-left:30px;
+	padding-right:10px;
+	white-space: nowrap;
+}
+
+table#checker tr:hover { background: #cc3300; }
+table#checker tr:first-child:hover, table#checker tr:nth-last-child(1):hover {
+ background: none;
+}
+
+table.UseSimple { margin-right:10px; }
+
+table.UseSimple td { font-size:16px; }
+
+table.UseSimple th
+{
+	background:none;
+	border:none;
+	text-align:left;
+}
+
+table.UseSimple tr > td:first-child
+{
+	padding-left:30px;
+	padding-right:10px;
+	white-space: nowrap;
+}
+
+table.UseSimple tr:hover { background: #309830; }
+table.UseSimple tr:nth-child(1):hover, table.UseSimple tr:nth-last-child(1):hover {
+ background: none;
+}
+
+
+td.td1 table tr:not(.noHover):hover { background: #3E7BB9;/*-webkit-transition:background-color 1s ease;*/ }
+td.td1 table tr:nth-child(1):hover, td.td1 table tr:nth-last-child(1):hover {
+ background: none;
+}
+
+
+.tdAlignCenter td { text-align:center; }
+
+
+table#popupBtns tr > td:not(.trHover)
+{
+	padding-left:21px;
+	padding-right:10px;
+	white-space: nowrap;
+}
+
+
+table.popup { margin-right:10px; }
+
+table.popup td { font-size:16px; }
+
+table.popup th
+{
+	background:none;
+	border:none;
+	text-align:left;
+}
+
+table.popup tr > td:first-child
+{
+	padding-left:30px;
+	padding-right:10px;
+	white-space: nowrap;
+	text-align:left;
+}
+
+table.popup input[type='radio']
+{
+	width:40px;
+	height:15px;
+}
+
+.trHover
+{
+	padding-left:21px;
+	font-size:16px;
+}
+
+.trHover:hover
+{
+	background-image:url(pic/move.png);
+	background-repeat:no-repeat;
+	background-position:3px top;
+}
+
+.alt
+{
+	color: #565656;
+	background-color: #94B5DA;
+}
+
+.noStandart
+{
+	padding-left:5px;
+	font-size:16px;
+	font-weight:bold;
+}
+.siFont
+{
+	font-size:16px;
+}
+
+.toRightSpace { padding-right:5px }
+
+.toLeftSpace { padding-left:5px }
+
+input {
+	font-size: 18px;
+}
+
+input[type="button"] 
+{
+	background-color: #3E6692;
+	border: 1px solid #E1E1E1;
+	color: white;
+	font-size: 18px;
+	margin: 5px;
+}
+input[type="button"]:not([disabled]):hover 
+{
+	-webkit-box-shadow: #309830 1px 0px 7px;
+	border: 1px solid #309830;
+}
+
+#save
+{
+	font-size:28px;
+}
+
+#save[disabled]
+{
+	font-size:28px;
+	background-color:#f5f4ea;
+	border: 1px solid #e1e1e1;
+	color:#ece9d8;
+}
+#pInterval {background-color:#ece9d8;}
+textarea {
+	border:1px solid #a79f72;
+	background-color:#ece9d8;
+	font-size:10px;
+	/*display: table-row-group;*/
+	-webkit-transition:All 1s ease;
+	width:150px;
+	height:40px;
+	overflow:hidden;
+}
+
+textarea:hover {
+	-webkit-transform:  scale(3)  translate(-30px);
+	font-size:5px;
+    overflow-y:scroll;
+    
+}
+
+.hide{
+
+}
+.tableHide {
+	/*-webkit-box-shadow:0px 0px 7px #a79f72; 	-webkit-border-radius: 7px;*/
+	background-color: rgba(236, 233, 216, 0.6);
+	position:absolute;	
+	}
+
+.sndSelect
+{
+    width:80px;
+}
+
+
+.play
+{
+    cursor:pointer;
+}
+.play.dis 
+{
+    opacity:.3;
+    cursor:default;
+}
+-->
+</style>
+</head>
+
+<body class="tmdFont">
+
+<table  border="0" align="center" cellpadding="1" cellspacing="2" id="optBody">
+  <tr>
+    <th colspan="3" class="thBody"><span class="t">T</span><span class="m">M</span><span class="d">D</span>&nbsp;<span id="optionTitle"></span></th>
+  </tr>
+
+
+
+  <tr>
+  
+<td valign="top" class="tdBody td1"><!--1-->
+    
+    <div class="thBody "><span class="t" id="optionPopupEdit"></span></div>
+    <div class="cont">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="autoLang" id="popupBtns">
+  <tr class="nodrop nodrag">
+    <th class="noStandart toRightSpace"><span id="optionPopupShow"></span></th>
+  </tr>
+
+  <tr class="nodrop nodrag noHover"><td>&nbsp;</td></tr>   
+  <tr class="nodrop nodrag siFont">
+    <td><label><input name="showSearch" type="checkbox" id="showSearch"></label></td>
+  </tr>  
+  <tr class="nodrop nodrag siFont">
+    <td><label><input name="showOptionPage" type="checkbox" id="showOptionPage"></label></td>
+  </tr>
+    
+  <tr class="nodrop nodrag"><td>&nbsp;</td></tr>  
+</table>
+<input id="TRorder" name="TRorder" type="hidden" value="">  
+
+<br>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="clickTablePop" class="popup autoLang tdAlignCenter">
+  <tbody><tr>
+    <th colspan="4" class="noStandart"><span id="optionsClick"></span>:</th>
+    </tr>
+    <tr>
+      <td><span id="opClickTab"></span></td>
+      <td><span id="opClickNew"></span></td>
+      <td><span id="opClickTmd"></span></td>
+      <td><span id="opClickThis"></span></td>
+    </tr>
+    <tr>
+      <td><span id="opClickLeft"></span></td>
+      <td><input type="radio" name="btn_click_opt" id="btn_click_opt" value="newTab"></td>
+      <td><input type="radio" name="btn_click_opt" id="btn_click_opt" value="thisIfTmd"></td>
+      <td><input type="radio" name="btn_click_opt" id="btn_click_opt" value="this"></td>
+    </tr>
+    <tr>
+      <td><span id="opClickMiddle"></span></td>
+      <td><input type="radio" name="btn_click_optMiddle" id="btn_click_optMiddle" value="newTab"></td>
+      <td><input type="radio" name="btn_click_optMiddle" id="btn_click_optMiddle" value="thisIfTmd"></td>
+      <td><input type="radio" name="btn_click_optMiddle" id="btn_click_optMiddle" value="this"></td>
+    </tr>
+    <tr>
+      <td><span id="opClickRight"></span></td>
+      <td><input type="radio" name="btn_click_optRight" id="btn_click_optRight" value="newTab"></td>
+      <td><input type="radio" name="btn_click_optRight" id="btn_click_optRight" value="thisIfTmd"></td>
+      <td><input type="radio" name="btn_click_optRight" id="btn_click_optRight" value="this"></td>
+    </tr>
+    <tr class="noHover">
+      <td colspan="4"  class="noStandart" style="height:5px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><span id="opClickContextSearch"></span></td>
+      <td><input type="radio" name="btn_click_ContextSearch" id="btn_click_ContextSearch" value="newTab"></td>
+      <td><input type="radio" name="btn_click_ContextSearch" id="btn_click_ContextSearch" value="thisIfTmd"></td>
+      <td><input type="radio" name="btn_click_ContextSearch" id="btn_click_ContextSearch" value="this"></td>
+    </tr>
+    <tr>
+      <td colspan="4" class="noStandart">&nbsp;</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+<br>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="rightClick" class="popup autoLang tdAlignCenter">
+  <tbody><tr>
+    <th class="noStandart"><span id="rightClickContextMenu"></span>:</th>
+    </tr>
+    <tr>
+      <td><label><input name="rClick" type="checkbox" id="rClick"></label></td>
+    </tr>
+    <tr>
+      <td class="noStandart">&nbsp;</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+</div><br>
+</td><!--2-->  
+<td valign="top" class="tdBody td2">
+
+    <div class="thBody "><span class="m" id="optionsContent"></span></div>
+	<div class="cont">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="UseSimple autoLang" id="opUse">
+	    <tr>
+	      <th class="noStandart"><span id="opUseActivate"></span>:</th>
+	    </tr>
+	    <tr>
+	      <td><label><input name="opUseOF" type="checkbox" id="opUseOF"></label></td>
+	    </tr>
+	    <tr>
+	      <td><label><input name="opUseFU" type="checkbox" id="opUseFU"></label></td>
+	    </tr>
+	    <tr>
+	      <td><label><input name="opUseAW" type="checkbox" id="opUseAW"></label></td>
+	    </tr>
+	    <tr>
+	      <td><label><input name="opUseFT" type="checkbox" id="opUseFT"></label></td>
+	    </tr> 
+	    <tr>
+	      <td><label><input name="opUseQL" type="checkbox" id="opUseQL"></label></td>
+	    </tr>        
+	    <tr>
+	      <td><label><input name="opUsePT" type="checkbox" id="opUsePT"></label></td>
+	    </tr>        
+	    <tr>
+	      <td><label><input name="opUseSF" type="checkbox" id="opUseSF"></label></td>
+	    </tr> 
+	    <tr>
+	      <td><label><input name="opUseWtch" type="checkbox" id="opUseWtch"></label></td>
+	    </tr> 
+	    <tr>
+	      <td><label><input name="opUseUploadTemplate" type="checkbox" id="opUseUploadTemplate"></label></td>
+	    </tr>        
+	    <tr>
+	      <td><label><input name="opUseHighlightMyNickName" type="checkbox" id="opUseHighlightMyNickName"></label></td>
+	    </tr>  
+	    <tr>
+	      <td><label><input name="opUseCustomQuote" type="checkbox" id="opUseCustomQuote"></label></td>
+	    </tr> 
+	    <tr>
+	      <td><label><input name="opUseQuickPmBox" type="checkbox" id="opUseQuickPmBox"></label></td>
+	    </tr>
+	    <tr>
+	      <td><label><input name="opUseSpoilerHideHlp" type="checkbox" id="opUseSpoilerHideHlp"></label></td>
+	    </tr> 
+	    <tr>
+	      <td><label><input name="opUseSearchTable" type="checkbox" id="opUseSearchTable">Search: Advanced Table</label></td>
+	    </tr> 
+	    <tr>
+	      <td><label><input name="opUseForumMarkNewTopics" type="checkbox" id="opUseForumMarkNewTopics">Forum: Mark New Topics</label></td>
+	    </tr>      
+
+          
+	    <tr><td>&nbsp;</td></tr>         
+	    </table>
+
+<!--<table width="100%" border="0" cellpadding="0" cellspacing="0" class="UseSimple">
+	    <tr>
+	      <th class="noStandart">Language:</th>
+	      </tr>
+	    <tr>
+	      <td align="right"><label><select name="opUseLN" id="opUseLN">
+        <option value="en">Enlgish</option>
+        <option value="ro">Româmă</option>
+        <option value="ru">Русский</option>
+      </select>&nbsp;&nbsp;&nbsp;</label></td>
+	      </tr>
+	    <tr>          
+	    <tr><td>&nbsp;</td></tr>         
+</table>-->
+
+<br><div id="opUseOFtable">
+<table id="opUseOFOp" width="100%" border="0" cellpadding="0" cellspacing="0" class="UseSimple autoLang">
+	    <tr>
+	      <th class="noStandart"><span id="opUseOF"></span>:</th>
+	    </tr>
+	    <tr>
+	      <td><label><input name="opUseOFflColse" type="checkbox" id="opUseOFflColse"></label></td>
+	    </tr>
+	    <tr>
+	      <td><label><input name="opUseOFuseColor" type="checkbox" id="opUseOFuseColor"></label></td>
+	    </tr>
+	    <tr>
+	      <td><label><input name="opUseOFpRight" type="checkbox" id="opUseOFpRight"></label></td>
+	    </tr>
+     
+       
+	    <tr><td>&nbsp;</td></tr>         
+</table></div>
+
+<br><div id="opUseFUtable">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="UseSimple autoLang">
+	    <tr>
+	      <th class="noStandart"><span id="opUseFU"></span>:</th>
+	    </tr>
+	    <tr>
+	      <td><label for="opUseFUList"><span id="opUseFUListS"></span></label></td>
+	    </tr>
+	    <tr>
+	      <td><label>
+	        <textarea name="opUseFUList" cols="25" rows="5" class="classname" id="opUseFUList"></textarea>
+	        </label></td>
+	    </tr>       
+        <tr>
+          <td><a href="http://www.torrentsmd.com/friends.php?import" target="_blank" class="btn"><span id="opUseFUImport"></span></a></td></tr>  
+	    <tr><td>&nbsp;</td></tr>         
+</table>
+</div>
+
+
+
+<br><div id="opUseFTtable">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="UseSimple autoLang">
+	    <tr>
+	      <th class="noStandart"><span id="opUseFT"></span>:</th>
+	    </tr>
+	    <tr>
+	      <td><label><textarea name="opUseFTList" cols="25" rows="5" class="classname" id="opUseFTList"></textarea></label></td>
+	    </tr>       
+
+
+	    <tr><td>&nbsp;</td></tr>         
+</table></div>
+
+
+    
+
+    </div><br>
+</td><!--3-->
+<td valign="top" class="tdBody td3">
+
+    <div class="thBody "><span class="d" id="optionSoundSet"></span></div>
+    <div class="cont">
+    
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="autoLang" id="checker">
+  <tbody>
+  <tr>
+    <th colspan="2" class="noStandart"><span id="opShowChecker"></span>:</th>
+  </tr>
+  
+  <tr>
+    <td><label><input name="opShowInbox" type="checkbox" id="opShowInbox"><span id="btn_inbox"></span></label> </td>
+    <td width="100%"></td>
+  </tr>
+  <tr>
+    <td><label><input name="opShowWatcher" type="checkbox" id="opShowWatcher"><span id="btn_watcher"></span></label> </td>
+    <td> </td>
+  </tr>
+ <tr>
+    <td><label><input name="opShowTorrents" type="checkbox" id="opShowTorrents"><span id="btn_torrents"></span></label> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-left:5px;" class="noStandart"><label><input name="opShowSum" type="checkbox" id="opShowSum"><span id="opShowCheckerSum">AutoSum</span></label></td>
+   </tr>
+   <tr>
+    <td colspan="2">&nbsp;</td>
+   </tr>
+
+  </tbody>
+</table>
+
+
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="checker" class="noEffect sndChecker">
+  <tr>
+    <th colspan="3" class="noStandart"><span id="opSound"></span>:</th>
+  </tr>
+  
+  <tr> <!--jingleTMD.ogg  notify.ogg  s1.ogg  s2.ogg  s3.ogg-->
+    <td><label><input name="ntfSndInbox" type="checkbox" id="ntfSndInbox"> <span id="btn_inbox"></span> </label> </td>
+    <td><select name="ntfSndInboxSrc" id="ntfSndInboxSrc" class="sndSelect">
+            <option value="notify">(default)</option>
+            <option value="jingleTMD">jingle (by ceekay)</option>
+            <option value="s1">sound #1</option>
+            <option value="s2">sound #2</option>
+            <option value="s3">sound #3</option>
+            <option value="s4">sound #4</option>
+        </select>
+    </td>
+    <td><img src="pic/play.png" class="play" what="ntfSndInboxSrc" /></td>
+  </tr>
+
+  <tr> 
+    <td><label><input name="ntfSndWatcher" type="checkbox" id="ntfSndWatcher"> <span id="btn_watcher"></span> </label> </td>
+    <td><select name="ntfSndWatcherSrc" id="ntfSndWatcherSrc" class="sndSelect">
+            <option value="notify">(default)</option>
+            <option value="jingleTMD">jingle (by ceekay)</option>
+            <option value="s1">sound #1</option>
+            <option value="s2">sound #2</option>
+            <option value="s3">sound #3</option>
+            <option value="s4">sound #4</option>
+        </select>
+    </td>
+    <td><img src="pic/play.png" class="play" what="ntfSndWatcherSrc" /></td>
+  </tr>
+  
+  <tr> 
+    <td><label><input name="ntfSndTorrents" type="checkbox" id="ntfSndTorrents"> <span id="btn_torrents"></span> </label> </td>
+    <td><select name="ntfSndTorrentsSrc" id="ntfSndTorrentsSrc" class="sndSelect">
+            <option value="notify">(default)</option>
+            <option value="jingleTMD">jingle (by ceekay)</option>
+            <option value="s1">sound #1</option>
+            <option value="s2">sound #2</option>
+            <option value="s3">sound #3</option>
+            <option value="s4">sound #4</option>
+        </select>
+    </td>
+    <td><img src="pic/play.png" class="play" what="ntfSndTorrentsSrc" /></td>
+  </tr>  
+  
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+</table>
+
+
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="checker" class="noEffect">
+  <tr>
+    <th class="noStandart"><span id="opPinterval"></span>:</th>
+  </tr>
+  <tr>
+    <td align="right"><label>
+      <select name="pInterval" id="pInterval">
+        <option value="30">30 sec</option>
+        <option value="60">1 min</option>
+        <option value="120">2 min</option>
+        <option value="300">5 min</option>
+      </select>
+    </label> &nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="checker" class="noEffect">
+  <tr>
+    <th class="noStandart"><span id="opDomen">Domain</span>:</th>
+  </tr>
+    <tr>
+      <td></td>
+      <td><label><input type="radio" name="domainName" id="domainName" value="eu"> eu</label></td>
+      <td><label><input type="radio" name="domainName" id="domainName" value="com"> com</label></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+
+<br><br><br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="checker" class="noEffect">
+  <tr>
+    <th class="noStandart"><span id="opExperimental">Experimental</span>:</th>
+  </tr>
+    <tr>
+      <td><label><input type="checkbox" name="ajaxLink" id="ajaxLink"> Quicker Navigation</label></td>
+ 
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+    </div><br> 
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <input type="button" name="suggestion" id="suggestion"  value="">&nbsp;&nbsp;
+      <input type="button"name="goToNews" id="goToNews" value=""></td>
+    <td  align="right"> <input id="save" name="save" type="button" value="" /></td>
+  </tr>
+</table>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>

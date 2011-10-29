@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+	body {
+		cursor: default;
+		margin: 2px;
+		width: 100%;
+		background-color: #F5F4EA;
+		overflow: hidden;
+	}
+	#search {
+		width: 125px;
+	}
+	#popup-baloon, #popup-baloon table {
+		width: 150px;
+		font-size: 10pt;
+	}
+	.button {
+		color: #0A50A1;
+		border: #F5F4EA 1px solid;
+  	}
+	.button table {
+		color: #0A50A1;
+  	}
+	.button:hover {
+		background: #ece9d8;
+		cursor: pointer;
+		border:#A79F72 1px solid;
+		/*width: 100%;*/
+	}
+	a {
+		cursor: pointer;
+		color: #0A50A1;
+		text-decoration: none;
+	}
+	#search {
+		border: #A79F72 1px solid;
+		background: url(pic/search_icon.png) no-repeat 1px 1px;
+		padding-left: 20px;
+		height: 19px;
+		width: 150px;
+	}
+	span {
+		padding-left:5px;
+	}
+	span#inboxC, span#new_torrC, span#watcherC {
+		padding-left:0px;
+	}
+	#searchPlus {
+		display: none;
+	 	margin: 0 0 0 0; 
+	 	text-align:right;
+		padding-left: 140px;
+		padding-top:7px;
+		position: absolute;
+	}
+	#searchPlus img { 
+		cursor: pointer;
+	}
+	#searchPlus img:hover { 
+		background: #ece9d8;
+	}
+</style>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/popup.js"></script>
+</head>
+<body onLoad="call_server();" class="tmdFont">
+    <div id="reloading" style="position:fixed;top:8px;right:10px;"><img src="pic/loading.gif"></div>
+	
+	<table width="150" border="0" cellpadding="3" cellspacing="0" id="popup-baloon">
+		<tr>
+			<td>
+			  <div id="showSearch">
+			    <input id="search" style="color:#A79F72" type="text" value="">			 
+		        <table id="searchPlus"  align="right" border="0" cellpadding="0" cellspacing="0">
+			        <tr>
+			          <td><img id="searchIMDB" src="pic/imdb_16.jpg" width="16" height="16"></td>
+			          <td><img id="searchGo" src="pic/search_icon.png" width="16" height="16"></td>
+		            </tr>
+	            </table>
+	          </div>  
+		   </td>
+		</tr>
+        
+        <tr id="menuHere" style="height:0px;"><td></td></tr>
+
+        <tr id="popup-options"><td class="button" onmousedown="return false" onmouseup="return baseurl('optionsPage',event)" onclick="return false" ondblclick="return false" oncontextmenu="return false"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="16"><img src="pic/options.png" width="16" height="16"></td> <td><span id="optionsPage">optionTitle</span></td></tr></tbody></table></td></tr>
+        <tr id="popup-empty"><td class="button" onmousedown="return false" onmouseup="return baseurl('optionsPage',event)" onclick="return false" ondblclick="return false" oncontextmenu="return false"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="16"><img src="pic/options.png" width="16" height="16"></td> <td><span id="optionsEmpty">popup is empty</span></td></tr></tbody></table></td></tr>	
+		</table>
+			
+<audio id="notify_sound" src="sound/notify.mp3"></audio>
+</body>
+</html>

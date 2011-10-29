@@ -1,0 +1,210 @@
+{
+   "TMDdescription":  
+    {
+      "message": "Navigați mai ușor pe tracker-ul Torrentsmd.com"
+    },
+   "TMDname":
+    {
+      "message": "Torrents.MD extension"
+    },
+
+
+
+
+
+
+   "save":
+    {
+      "message": "Salvează"
+    },
+   "optionTitle":
+    {
+      "message": "Pagina cu opțiuni"
+    },
+   "optionPopupEdit":
+    {
+      "message": "Popup"
+    },
+   "optionPopupShow":
+    {
+      "message": "Afișează următoarele butoane în pop-up"
+    },
+   "optionSoundSet":
+    {
+      "message": "Badge"
+    },
+
+   "optionsClick":
+    {
+      "message": "Opțiunile click"
+    },
+   "newTab":
+    {
+      "message": "Tab nou"
+    },
+   "thisIfTmd":
+    {
+      "message": "Același tab dacă e deschis TMD"
+    },
+   "this":
+    {
+      "message": "Tabul activ"
+    },
+
+
+   "opClickTab":
+    {
+      "message": "click &#92; tab"
+    },
+   "opClickNew":
+    {
+      "message": "nou"
+    },
+   "opClickTmd":
+    {
+      "message": "tmd"
+    },
+   "opClickThis":
+    {
+      "message": "acesta"
+    },
+  "opClickLeft":
+    {
+      "message": "Stîng"
+    },
+   "opClickMiddle":
+    {
+      "message": "Mijloc"
+    },
+   "opClickRight":
+    {
+      "message": "Drept"
+    },
+
+
+
+
+   "optionsContent":
+    {
+      "message": "Content"
+    },
+   "opUseActivate":
+    {
+      "message": "Activează"
+    },
+   "opUseOF":
+    {
+      "message": "Prieteni Online"
+    },
+   "opUseFU":
+    {
+      "message": "Uploaderul favorit"
+    },
+   "opUseAW":
+    {
+      "message": "Auto Urmărire"
+    },
+   "opUseFUListS":
+    {
+      "message": "Lista de utilizatori"
+    },
+   "opUseFUImport":
+    {
+      "message": "Importă din Lista cu prieteni"
+    },
+   "opShowChecker":
+    {
+      "message": "Controlează"
+    },
+   "opShowCheckerSound":
+    {
+      "message": "Sunet"
+    },
+   "opPinterval":
+    {
+      "message": "Intervalul de control"
+    },
+
+
+
+
+
+
+   "search":
+    {
+      "message": "Căutare"
+    },
+   "btn_inbox":
+    {
+      "message": "Mesaje noi"
+    },
+   "btn_new_torr":
+    {
+      "message": "Torrente noi"
+    },
+   "btn_torrents":
+    {
+      "message": "Torrente"
+    },
+   "btn_bookmarks":
+    {
+      "message": "Torrente preferate"
+    },
+   "btn_watcher":
+    {
+      "message": "Urmărire"
+    },
+   "btn_forum":
+    {
+      "message": "Forum"
+    },
+   "btn_friends":
+    {
+      "message": "Prieteni"
+    },
+   "btn_mytorrents":
+    {
+      "message": "Torrentele mele"
+    },
+   "btn_to_appreciate":
+    {
+      "message": "Apreciază"
+    },
+   "btn_upload":
+    {
+      "message": "Încarcă un torrent"
+    },
+
+
+
+
+   "bb_anchor":
+    {
+      "message": "Introduceți numele ancorei"
+    },
+   "bb_spoiler":
+    {
+      "message": "Text în spoiler"
+    },
+   "bb_link":
+    {
+      "message": "Text sub adresă web"
+    },
+   "bb_size":
+    {
+      "message": "Mărimea textului"
+    },
+
+
+
+   "lang":
+    {
+      "message": "ro"
+    },
+
+
+   "empty":
+     {
+      "message": "empty"
+     }
+}

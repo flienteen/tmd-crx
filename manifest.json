@@ -1,0 +1,23 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "pic/TMD_not_logged_in.png",
+      "default_title": "TMD",
+      "popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "lib/jquery.js", "lib/st.js", "lib/opUse.js" ],
+      "matches": [ "http://www.torrentsmd.com/*", "http://torrentsmd.com/*", "http://www.torrentsmd.eu/*", "http://torrentsmd.eu/*", "http://www.torrentsmd.me/*", "http://torrentsmd.me/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_TMDdescription__",
+   "icons": {
+      "128": "pic/icon_128.png",
+      "16": "pic/tmd_16x16.png",
+      "32": "pic/tmd_32x32.png"
+   },
+   "name": "__MSG_TMDname__",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "unlimitedStorage", "contextMenus", "notifications", "http://www.torrentsmd.com/", "http://torrentsmd.com/", "http://www.torrentsmd.eu/", "http://torrentsmd.eu/", "http://www.torrentsmd.me/", "http://torrentsmd.me/" ],
+   "version": "1.1.4"
+}

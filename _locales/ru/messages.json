@@ -1,0 +1,302 @@
+{
+   "TMDdescription":  
+    {
+      "message": "Предлагаемое расширение облегчит навигацию по трекеру Torrents.MD."
+    },
+   "TMDname":
+    {
+      "message": "Torrents.MD extension"
+    },
+
+
+
+
+   "send":
+    {
+      "message": "Отправить"
+    },
+
+   "save":
+    {
+      "message": "Сохранить"
+    },
+   "optionTitle":
+    {
+      "message": "Страница настроек"
+    },
+   "optionPopupEdit":
+    {
+      "message": "Pop-up"
+    },
+   "optionPopupShow":
+    {
+      "message": "Показать следующие кнопки в pop-up"
+    },
+   "optionSoundSet":
+    {
+      "message": "Badge"
+    },
+
+   "optionsClick":
+    {
+      "message": "Опции клика"
+    },
+   "newTab":
+    {
+      "message": "Новая вкладка"
+    },
+   "thisIfTmd":
+    {
+      "message": "Та же вкладка если открыта стр. TMD"
+    },
+   "this":
+    {
+      "message": "Активная вкладка"
+    },
+
+
+   "opClickTab":
+    {
+      "message": "клик &#92; вкладка"
+    },
+   "opClickNew":
+    {
+      "message": "новая"
+    },
+   "opClickTmd":
+    {
+      "message": "tmd"
+    },
+   "opClickThis":
+    {
+      "message": "активная"
+    },
+  "opClickLeft":
+    {   
+      "message": "левый"
+    },
+   "opClickMiddle":
+    {
+      "message": "средний"
+    },
+   "opClickRight":
+    {
+      "message": "правый"
+    },
+   "opClickContextSearch":
+    {
+      "message": "Контекстное"
+    },
+
+
+
+
+   "optionsContent":
+    {
+      "message": "Content"
+    },
+   "opUseActivate":
+    {
+      "message": "Активировать"
+    },
+   "opUseOF":
+    {
+      "message": "Онлайн Друзья"
+    },
+   "opUseOFflColse":
+    {
+      "message": "Авто Свернуть  [Все друзья ]"
+    },
+   "opUseOFuseColor":
+    {
+      "message": "Разноцветный [Все друзья ]"
+    },
+   "opUseOFpRight":
+    {
+      "message": "Двигать в право"
+    },
+   "opUseOFreloadList":
+    {
+      "message": "Обновить"
+    },
+   "opUseOFallFriends":
+    {
+      "message": "Все друзья"
+    },
+   "opUseFU":
+    {
+      "message": "Любимый Uploader"
+    },
+   "opUseFT":
+    {
+      "message": "Любимые Торренты"
+    },
+   "opUseAW":
+    {
+      "message": "Авто Слежение"
+    },
+    "opUseQL":
+    {
+      "message": "Быстрая Ссылка"
+    },
+    "opUsePT":
+    {
+      "message": "Названия Топика"
+    },
+    "opUseSF":
+    {
+      "message": "SmileFix"
+    },    
+    "opUseWtch":
+    {
+      "message": "Новые темы"
+    },    
+    
+
+    "opUseUploadTemplate":
+    {
+      "message": "Сохранять Шаблоны"
+    },
+    "opUseHighlightMyNickName":
+    {
+      "message": "Выделяй мое имя"
+    },
+    "opUseCustomQuote":
+    {
+      "message": "Полупрозрачные Цитаты"
+    },
+    "opUseQuickPmBox":
+    {
+      "message": "Быстрый ПМ"
+    },
+
+
+
+    
+   "opUseFUListS":
+    {
+      "message": "Список пользователей"
+    },
+   "opUseFUImport":
+    {
+      "message": "Импортировать из списка друзей"
+    },
+   "opShowChecker":
+    {
+      "message": "Проверять"
+    },
+   "opShowCheckerSound":
+    {
+      "message": "Звук"
+    },
+   "opPinterval":
+    {
+      "message": "Интервал запроса"
+    },
+    "opUseSpoilerHideHlp":
+    {
+      "message": "Скрыть 'нажмите сюда' (спойлер)"
+    },
+
+
+    
+    
+
+
+
+
+   "search":
+    {
+      "message": "Поиск"
+    },
+   "btn_inbox":
+    {
+      "message": "Входящие"
+    },
+   "btn_new_torr":
+    {
+      "message": "Новые раздачи"
+    },
+   "btn_torrents":
+    {
+      "message": "Торренты"
+    },
+   "btn_bookmarks":
+    {
+      "message": "Закладки"
+    },
+   "btn_watcher":
+    {
+      "message": "Слежение"
+    },
+   "btn_forum":
+    {
+      "message": "Форум"
+    },
+   "btn_friends":
+    {
+      "message": "Друзья"
+    },
+   "btn_mytorrents":
+    {
+      "message": "Мои раздачи"
+    },
+   "btn_to_appreciate":
+    {
+      "message": "Оценить"
+    },
+   "btn_upload":
+    {
+      "message": "Загрузить"
+    },
+   "showSearch":
+    {
+      "message": "Поиск"
+    },
+   "showOptionPage":
+    {
+      "message": "Настроить"
+    },
+
+
+
+   "bb_anchor":
+    {
+      "message": "Введите имя анкоры"
+    },
+   "bb_spoiler":
+    {
+      "message": "Текст спрятанный под спойлером"
+    },
+   "bb_link":
+    {
+      "message": "Имя веб адреса"
+    },
+   "bb_size":
+    {
+      "message": "Размер шрифта"
+    },
+
+
+
+   "suggestion":
+    {
+      "message": "Суппорт и ЧаВо"
+    },
+   "goToNews":
+    {
+      "message": "Просмотр страницы новостей"
+    },
+   "goToOptions":
+    {
+      "message": "Просмотр страницы настроек"
+    },
+
+
+
+
+   "lang":
+    {
+      "message": "ru"
+    }
+}
