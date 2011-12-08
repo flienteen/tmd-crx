@@ -19,5 +19,5 @@
    "name": "__MSG_TMDname__",
    "options_page": "options.html",
    "permissions": [ "tabs", "unlimitedStorage", "contextMenus", "notifications", "http://www.torrentsmd.com/", "http://torrentsmd.com/", "http://www.torrentsmd.eu/", "http://torrentsmd.eu/", "http://www.torrentsmd.me/", "http://torrentsmd.me/" ],
-   "version": "1.1.4.4"
+   "version": "1.1.4.5"
 }
