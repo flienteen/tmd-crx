@@ -296,6 +296,24 @@ textarea:hover {
     opacity:.3;
     cursor:default;
 }
+
+
+.soudVolume td
+{
+    padding-left: 10px !important;
+}
+
+.soudVolume span
+{
+    vertical-align: top;
+}
+
+.soudVolume input
+{
+    height: 21px;
+    margin: 0px;
+    margin-left: 22px;
+}
 -->
 </style>
 </head>
@@ -612,8 +630,14 @@ textarea:hover {
         </select>
     </td>
     <td><img src="pic/play.png" class="play" what="ntfSndTorrentsSrc" /></td>
-  </tr>  
-  
+  </tr>
+
+    <tr class="soudVolume">
+        <td colspan="3"><span>Volume</span> <input class="volume" type="range" value="90"  min="0" max="100" name="ntfSndVolume" id="ntfSndVolume" /></td>
+    </tr>
+
+
+
   <tr>
     <td colspan="3">&nbsp;</td>
   </tr>
