@@ -1,5 +1,19 @@
 {
-   "background_page": "background.html",
+	"manifest_version": 2,
+	"background": {
+		"page": "background.html"
+	},
+	"web_accessible_resources":[
+		"pic/pin.png",
+		"pic/loading.gif",
+		"pic/refresh.png",
+		"pic/friends.png",
+		"pic/loading0.gif",
+		"pic/inbox.png",
+		"pic/fonts/Verdana.ttf",
+		"pic/fonts/Verdana_Bold.ttf"
+	],
+	"content_security_policy": "script-src 'self'; object-src 'self'",
    "browser_action": {
       "default_icon": "pic/TMD_not_logged_in.png",
       "default_title": "TMD",
@@ -19,5 +33,5 @@
    "name": "__MSG_TMDname__",
    "options_page": "options.html",
    "permissions": [ "tabs", "unlimitedStorage", "contextMenus", "notifications", "http://www.torrentsmd.com/", "http://torrentsmd.com/", "http://www.torrentsmd.eu/", "http://torrentsmd.eu/", "http://www.torrentsmd.me/", "http://torrentsmd.me/" ],
-   "version": "1.1.4.9"
+   "version": "1.1.5.3"
 }

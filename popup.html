@@ -66,7 +66,7 @@
 <script type="text/javascript" src="lib/jquery.js"></script>
 <script type="text/javascript" src="lib/popup.js"></script>
 </head>
-<body onLoad="call_server();" class="tmdFont">
+<body class="tmdFont">
     <div id="reloading" style="position:fixed;top:8px;right:10px;"><img src="pic/loading.gif"></div>
 	
 	<table width="150" border="0" cellpadding="3" cellspacing="0" id="popup-baloon">
@@ -86,10 +86,10 @@
         
         <tr id="menuHere" style="height:0px;"><td></td></tr>
 
-        <tr id="popup-options"><td class="button" onmousedown="return false" onmouseup="return baseurl('optionsPage',event)" onclick="return false" ondblclick="return false" oncontextmenu="return false"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="16"><img src="pic/options.png" width="16" height="16"></td> <td><span id="optionsPage">optionTitle</span></td></tr></tbody></table></td></tr>
-        <tr id="popup-empty"><td class="button" onmousedown="return false" onmouseup="return baseurl('optionsPage',event)" onclick="return false" ondblclick="return false" oncontextmenu="return false"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="16"><img src="pic/options.png" width="16" height="16"></td> <td><span id="optionsEmpty">popup is empty</span></td></tr></tbody></table></td></tr>	
+        <tr id="popup-options"><td class="button"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="16"><img src="pic/options.png" width="16" height="16"></td> <td><span id="optionsPage">optionTitle</span></td></tr></tbody></table></td></tr>
+        <tr id="popup-empty"><td class="button"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="16"><img src="pic/options.png" width="16" height="16"></td> <td><span id="optionsEmpty">popup is empty</span></td></tr></tbody></table></td></tr>
 		</table>
 			
-<audio id="notify_sound" src="sound/notify.mp3"></audio>
+<!--<audio id="notify_sound" src="sound/notify.mp3"></audio>-->
 </body>
 </html>
